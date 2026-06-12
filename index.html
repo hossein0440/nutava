@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>نوتاوا | آوای خوش سلامتی در سفره‌ی شما</title>
+  <meta name="description" content="نوتاوا؛ عرضه‌کننده زعفران، خشکبار و محصولات سنتی. برای سفارش و ارتباط با ما از طریق شبکه‌های اجتماعی در تماس باشید." />
+  
+  <!-- تم رنگی هماهنگ با لوگو -->
+  <meta name="theme-color" content="#f9f5eb" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* استخراج شده از تصویر لوگوی ارسالی */
+      --bg-creamy: #fcfaf2; 
+      --brand-brown: #42342a;
+      --brand-green: #5d713c;
+      --brand-orange: #d48332;
+      --text-soft: #635449;
+      --surface: #ffffff;
+      --border: rgba(93, 113, 60, 0.15);
+      --radius-lg: 20px;
+      --shadow: 0 8px 25px rgba(66, 52, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    
+    body {
+      margin: 0;
+      font-family: "Vazirmatn", sans-serif;
+      background-color: var(--bg-creamy);
+      background-image: radial-gradient(circle at 50% 0%, rgba(93, 113, 60, 0.05), transparent 40%);
+      color: var(--brand-brown);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      padding: 20px 16px;
+    }
+
+    /* بخش هدر و لوگو */
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .logo-container {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 16px;
+      background: var(--surface);
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin: 0;
+      color: var(--brand-brown);
+    }
+
+    .brand-tagline {
+      font-size: 0.95rem;
+      color: var(--brand-green);
+      margin: 5px 0 0;
+      font-weight: 700;
+    }
+
+    /* کارت‌ها */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .welcome-card {
+      text-align: center;
+      background: linear-gradient(135deg, #ffffff 0%, #fcfaf2 100%);
+    }
+
+    .welcome-card h2 {
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+      color: var(--brand-orange);
+    }
+
+    .welcome-card p {
+      font-size: 0.92rem;
+      margin: 0;
+      color: var(--text-soft);
+      text-align: justify;
+    }
+
+    /* دکمه‌های ارتباطی */
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0 0 15px 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background: var(--brand-green);
+      border-radius: 2px;
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .contact-btn:active {
+      transform: scale(0.97);
+      background: var(--bg-creamy);
+    }
+
+    .btn-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--bg-creamy);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-green);
+    }
+
+    .btn-info { display: flex; flex-direction: column; }
+    .btn-label { font-size: 0.95rem; font-weight: 700; color: var(--brand-brown); }
+    .btn-handle { font-size: 0.85rem; color: var(--brand-green); direction: ltr; }
+
+    .btn-arrow { color: #ccc; }
+
+    /* درباره ما */
+    .about-text {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px 0 40px;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- هدر با لوگوی جدید -->
+    <header class="header">
+      <div class="logo-container">
+        <!-- 
+           نکته: تصویر لوگوی خود را با نام logo.png در کنار این فایل قرار دهید.
+        -->
+        <img src="logo.png" alt="لوگوی نوتاوا" onerror="this.src='https://via.placeholder.com/180x180?text=NUTAVA'">
+      </div>
+      <h1 class="brand-name">نوتاوا</h1>
+      <p class="brand-tagline">آوای خوش سلامتی در سفره‌ی شما</p>
+    </header>
+
+    <!-- پیام خوش‌آمدگویی -->
+    <section class="card welcome-card">
+      <h2>به نوتاوا خوش آمدید</h2>
+      <p>
+        سایت فروشگاهی نوتاوا در حال راه‌اندازی است. تا زمان افتتاح رسمی، برای مشاهده محصولات و ثبت سفارش، می‌توانید از طریق پیام‌رسان‌ها و شبکه‌های اجتماعی زیر با ما در ارتباط باشید.
+      </p>
+    </section>
+
+    <!-- راه‌های ارتباطی -->
+    <section>
+      <h3 class="section-title">راه‌های ارتباط و سفارش</h3>
+      <div class="contact-grid" id="contactLinks">
+        <!-- دکمه‌ها توسط جاوااسکریپت ساخته می‌شوند -->
+      </div>
+    </section>
+
+    <!-- درباره ما -->
+    <section class="card" style="margin-top: 24px;">
+      <h3 class="section-title">درباره ما</h3>
+      <p class="about-text">
+        نوتاوا با تمرکز بر عرضه محصولات اصیل ایرانی از جمله زعفران و خشکبار، تلاش می‌کند سلامت و کیفیت را به سفره‌های شما هدیه دهد. ما به سادگی و اصالت پایبندیم.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div>نوتاوا | nutava.ir</div>
+      <div style="margin-top: 5px; opacity: 0.7;">طراحی شده برای همراهی شما در مسیر سلامتی</div>
+    </footer>
+  </div>
+
+  <script>
+    // تنظیمات مرکزی - اطلاعات را اینجا ویرایش کنید
+    const BRAND_CONFIG = {
+      phone: "09303462154",
+      socials: [
+        { id: "instagram", label: "اینستاگرام", handle: "@nutava.ir", url: "https://instagram.com/nutava.ir" },
+        { id: "rubika", label: "روبیکا", handle: "@nutava_ir", url: "https://rubika.ir/nutava_ir" },
+        { id: "bale", label: "بله", handle: "@nutava", url: "https://ble.ir/nutava" },
+        { id: "eitaa", label: "ایتا", handle: "@nutava", url: "https://eitaa.com/nutava" },
+        { id: "phone", label: "تماس مستقیم", handle: "09303462154", url: "tel:09303462154" }
+      ]
+    };
+
+    const icons = {
+      instagram: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>`,
+      rubika: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`,
+      bale: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`,
+      eitaa: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>`,
+      phone: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>`
+    };
+
+    function render() {
+      const container = document.getElementById('contactLinks');
+      BRAND_CONFIG.socials.forEach(item => {
+        const a = document.createElement('a');
+        a.href = item.url;
+        a.className = 'contact-btn';
+        if(item.id !== 'phone') a.target = "_blank";
+        
+        a.innerHTML = `
+          <div class="btn-content">
+            <div class="btn-icon">${icons[item.id]}</div>
+            <div class="btn-info">
+              <span class="btn-label">${item.label}</span>
+              <span class="btn-handle">${item.handle}</span>
+            </div>
+          </div>
+          <div class="btn-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </div>
+        `;
+        container.appendChild(a);
+      });
+    }
+
+    render();
+  </script>
+</body>
+</html>
